@@ -13,10 +13,8 @@ import {
   Globe,
   Zap,
   Eye,
-  Clock,
   Check,
   Quote,
-  Building2,
   BarChart3,
   Code2,
 } from "lucide-react";
@@ -66,39 +64,6 @@ const values = [
     principle: "Yesterday's best practice is today's baseline.",
     description:
       "We invest in continuous learning, adopt emerging technologies early, and refine our processes with every engagement.",
-  },
-];
-
-/* ─── TIMELINE (With dates and metrics) ─── */
-
-const milestones = [
-  {
-    year: "2022",
-    title: "Togashi Technologies Founded",
-    description:
-      "Launched with a mission to build globally competitive technology from Africa. First 5 enterprise clients onboarded.",
-    metric: "5 clients",
-  },
-  {
-    year: "2023",
-    title: "Enterprise Expansion",
-    description:
-      "Expanded into government, healthcare, and financial services. Grew to 20+ active enterprise partnerships.",
-    metric: "20+ partners",
-  },
-  {
-    year: "2024",
-    title: "SaaS Platform Launch",
-    description:
-      "Launched 2 proprietary SaaS products serving multiple industries. Crossed 200+ business accounts on the platform.",
-    metric: "2 SaaS products",
-  },
-  {
-    year: "2025",
-    title: "Global Delivery Capability",
-    description:
-      "Serving clients across Africa and internationally. 50+ projects delivered with 99% client satisfaction.",
-    metric: "50+ projects",
   },
 ];
 
@@ -169,7 +134,7 @@ export default function AboutPage() {
               </p>
 
               {/* Manifesto */}
-              <div className="mt-8 border-l-2 border-neutral-900 pl-5">
+              <div className="mt-8 border-l-2 border-[#059669] pl-5">
                 <p className="text-base font-medium leading-relaxed text-neutral-800">
                   We refuse to build fragile systems. Every product we ship must
                   withstand real-world scale, generate measurable ROI, and
@@ -218,7 +183,7 @@ export default function AboutPage() {
                   transition={{ delay: 0.3 + i * 0.08 }}
                   className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm"
                 >
-                  <span className="text-3xl font-bold text-neutral-900">
+                  <span className="text-3xl font-bold text-[#059669]">
                     <AnimatedCounter
                       end={stat.value}
                       suffix={stat.suffix}
@@ -238,16 +203,16 @@ export default function AboutPage() {
       </section>
 
       {/* ─── VISION & MISSION (Rewritten) ─── */}
-      <section className="bg-neutral-950 py-24 text-white">
+      <section className="bg-[#0E0E10] py-24 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 md:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-2xl border border-neutral-800 p-8 transition-colors hover:border-neutral-700"
+              className="rounded-2xl border border-[#1F1F23] p-8 transition-colors hover:border-[#1F1F23]"
             >
-              <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#059669]">
                 Our Vision
               </span>
               <h2 className="mt-4 text-2xl font-bold">
@@ -266,9 +231,9 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="rounded-2xl border border-neutral-800 p-8 transition-colors hover:border-neutral-700"
+              className="rounded-2xl border border-[#1F1F23] p-8 transition-colors hover:border-[#1F1F23]"
             >
-              <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#059669]">
                 Our Mission
               </span>
               <h2 className="mt-4 text-2xl font-bold">
@@ -321,7 +286,8 @@ export default function AboutPage() {
               That&apos;s not a marketing promise — it&apos;s how we operate.
             </p>
             <div className="mt-8 border-t border-neutral-200 pt-6">
-              <p className="font-bold text-neutral-900">Founder & CEO</p>
+              <p className="font-bold text-neutral-900">Conrad Gumisiriza</p>
+              <p className="text-sm text-neutral-500">Founder & CEO</p>
               <p className="text-sm text-neutral-500">
                 Togashi Technologies Co. Ltd
               </p>
@@ -386,69 +352,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ─── JOURNEY TIMELINE (With dates + metrics) ─── */}
-      <section className="bg-white py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <span className="inline-block rounded-full border border-neutral-200 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-              Our Journey
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-              From founding to global delivery
-            </h2>
-          </motion.div>
-
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {milestones.map((m, i) => (
-              <motion.div
-                key={m.year}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="group relative rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg hover:shadow-neutral-900/[0.04]"
-              >
-                {/* Connecting line */}
-                {i < milestones.length - 1 && (
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.15 + 0.3, duration: 0.5 }}
-                    className="absolute -right-4 top-10 hidden h-px w-8 origin-left bg-neutral-300 lg:block"
-                  />
-                )}
-
-                {/* Year Badge */}
-                <span className="inline-block rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
-                  {m.year}
-                </span>
-
-                <h3 className="mt-4 text-base font-bold text-neutral-900">
-                  {m.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-500">
-                  {m.description}
-                </p>
-
-                {/* Metric */}
-                <div className="mt-4 border-t border-neutral-100 pt-3">
-                  <span className="text-sm font-bold text-neutral-900">
-                    {m.metric}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── COMPETITIVE ADVANTAGE (Authority Section) ─── */}
       <section className="border-t border-neutral-200 bg-neutral-50 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -472,7 +375,7 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[#0E0E10] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
                 >
                   Book a 30-Minute Strategy Call
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -518,7 +421,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── DUAL CTA ─── */}
-      <section className="bg-neutral-950 py-24">
+      <section className="bg-[#0E0E10] py-24">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -528,7 +431,7 @@ export default function AboutPage() {
           >
             Ready to partner with a team that
             <br />
-            <span className="text-neutral-500">
+            <span className="text-[#059669]">
               treats your system like their own?
             </span>
           </motion.h2>
@@ -552,15 +455,15 @@ export default function AboutPage() {
             className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-400"
           >
             <span className="flex items-center gap-1.5">
-              <Check className="h-3.5 w-3.5 text-white" />
+              <Check className="h-3.5 w-3.5 text-[#059669]" />
               Senior engineer on every call
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-3.5 w-3.5 text-white" />
+              <Check className="h-3.5 w-3.5 text-[#059669]" />
               No obligation
             </span>
             <span className="flex items-center gap-1.5">
-              <Check className="h-3.5 w-3.5 text-white" />
+              <Check className="h-3.5 w-3.5 text-[#059669]" />
               100% confidential
             </span>
           </motion.div>
@@ -581,7 +484,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-700 px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-neutral-800"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F1F23] px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-[#17171A]"
             >
               View Our Case Studies
             </Link>

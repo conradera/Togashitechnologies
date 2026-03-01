@@ -42,7 +42,7 @@ export default function SectionHeading({
       {badge && (
         <motion.span
           variants={itemVariants}
-          className="inline-block rounded-full border border-neutral-200 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-neutral-500"
+          className="inline-block rounded-full border border-[rgba(5,150,105,0.2)] px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-[#059669]"
         >
           {badge}
         </motion.span>

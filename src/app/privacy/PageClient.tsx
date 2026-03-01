@@ -60,7 +60,7 @@ export default function PrivacyPage() {
           >
             <Link
               href="/"
-              className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-500 transition-colors hover:text-neutral-900"
+              className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-500 transition-colors hover:text-[#059669]"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to Home
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
               your data rights, please contact us at{" "}
               <a
                 href="mailto:hello@togashi.tech"
-                className="font-medium text-neutral-900 underline underline-offset-4 transition-colors hover:text-neutral-700"
+                className="font-medium text-[#059669] underline underline-offset-4 transition-colors hover:text-[#047857]"
               >
                 hello@togashi.tech
               </a>

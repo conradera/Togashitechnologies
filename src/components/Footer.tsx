@@ -53,7 +53,7 @@ const itemVariants = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-white">
+    <footer className="border-t border-[#1F1F23] bg-[#0E0E10]">
       {/* CTA Band */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
@@ -61,7 +61,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center justify-between gap-6 border-b border-neutral-100 py-16 md:flex-row"
+          className="flex flex-col items-center justify-between gap-6 border-b border-[#1F1F23] py-16 md:flex-row"
         >
           <div>
             <motion.h3
@@ -69,7 +69,7 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl"
+              className="text-2xl font-bold tracking-tight text-white md:text-3xl"
             >
               Ready to build something great?
             </motion.h3>
@@ -78,7 +78,7 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-2 text-neutral-500"
+              className="mt-2 text-neutral-400"
             >
               Book a free 30-minute technical consultation — no commitment required.
             </motion.p>
@@ -91,7 +91,7 @@ export default function Footer() {
           >
             <Link
               href="/contact"
-              className="group flex items-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
+              className="group flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-[#0E0E10] transition-all hover:bg-neutral-100 hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
             >
               Start a Project
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -117,26 +117,26 @@ export default function Footer() {
                 alt="Togashi Technologies"
                 width={120}
                 height={48}
-                className="h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain brightness-0 invert"
               />
             </div>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-500">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
               Forward-thinking technology company delivering globally competitive
               SaaS platforms and digital transformation solutions.
             </p>
 
             {/* Contact Details */}
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-2 text-sm text-neutral-600">
-                <Mail className="h-3.5 w-3.5 text-neutral-400" />
+              <div className="flex items-center gap-2 text-sm text-neutral-400">
+                <Mail className="h-3.5 w-3.5 text-[#059669]" />
                 hello@togashi.tech
               </div>
-              <div className="flex items-center gap-2 text-sm text-neutral-600">
-                <Phone className="h-3.5 w-3.5 text-neutral-400" />
+              <div className="flex items-center gap-2 text-sm text-neutral-400">
+                <Phone className="h-3.5 w-3.5 text-[#059669]" />
                 Available on request
               </div>
-              <div className="flex items-start gap-2 text-sm text-neutral-600">
-                <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-neutral-400" />
+              <div className="flex items-start gap-2 text-sm text-neutral-400">
+                <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#059669]" />
                 Global delivery, local presence
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/togashi-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 text-neutral-500 transition-all hover:border-neutral-300 hover:text-neutral-900"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#1F1F23] text-neutral-500 transition-all hover:border-[#059669] hover:text-[#059669]"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
@@ -163,7 +163,7 @@ export default function Footer() {
           >
             <motion.h4
               variants={itemVariants}
-              className="text-xs font-semibold uppercase tracking-wider text-neutral-400"
+              className="text-xs font-semibold uppercase tracking-wider text-[#059669]"
             >
               Services
             </motion.h4>
@@ -172,7 +172,7 @@ export default function Footer() {
                 <motion.li key={item.label} variants={itemVariants}>
                   <Link
                     href={item.href}
-                    className="text-sm text-neutral-600 transition-colors hover:text-neutral-900"
+                    className="text-sm text-neutral-400 transition-colors hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -190,7 +190,7 @@ export default function Footer() {
           >
             <motion.h4
               variants={itemVariants}
-              className="text-xs font-semibold uppercase tracking-wider text-neutral-400"
+              className="text-xs font-semibold uppercase tracking-wider text-[#059669]"
             >
               Company
             </motion.h4>
@@ -199,7 +199,7 @@ export default function Footer() {
                 <motion.li key={item.label} variants={itemVariants}>
                   <Link
                     href={item.href}
-                    className="text-sm text-neutral-600 transition-colors hover:text-neutral-900"
+                    className="text-sm text-neutral-400 transition-colors hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -217,7 +217,7 @@ export default function Footer() {
           >
             <motion.h4
               variants={itemVariants}
-              className="text-xs font-semibold uppercase tracking-wider text-neutral-400"
+              className="text-xs font-semibold uppercase tracking-wider text-[#059669]"
             >
               Industries
             </motion.h4>
@@ -226,7 +226,7 @@ export default function Footer() {
                 <motion.li
                   key={item}
                   variants={itemVariants}
-                  className="text-sm text-neutral-600"
+                  className="text-sm text-neutral-400"
                 >
                   {item}
                 </motion.li>
@@ -242,33 +242,33 @@ export default function Footer() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="border-t border-neutral-200 bg-neutral-50"
+        className="border-t border-[#1F1F23] bg-[#17171A]"
       >
         <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <div className="flex flex-col items-center gap-1 sm:items-start">
-              <p className="text-xs font-medium text-neutral-500">
+              <p className="text-xs font-medium text-neutral-400">
                 &copy; {new Date().getFullYear()} Togashi Technologies Co. Ltd. All rights
                 reserved.
               </p>
-              <p className="text-[11px] text-neutral-400">
+              <p className="text-[11px] text-neutral-500">
                 Registered technology company &middot; Global delivery
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-              <span className="flex items-center gap-1.5 text-[11px] text-neutral-400">
+              <span className="flex items-center gap-1.5 text-[11px] text-neutral-500">
                 <Shield className="h-3 w-3" />
                 Data protection compliant
               </span>
               <Link
                 href="/privacy"
-                className="text-xs text-neutral-400 transition-colors hover:text-neutral-600"
+                className="text-xs text-neutral-500 transition-colors hover:text-white"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-xs text-neutral-400 transition-colors hover:text-neutral-600"
+                className="text-xs text-neutral-500 transition-colors hover:text-white"
               >
                 Terms of Service
               </Link>

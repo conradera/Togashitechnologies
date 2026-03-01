@@ -67,7 +67,7 @@ export default function Navbar() {
                   {pathname === link.href && (
                     <motion.div
                       layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-4 right-4 h-[2px] bg-neutral-900"
+                      className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#059669]"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
@@ -79,7 +79,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               <Link
                 href="/pricing-calculator"
-                className="hidden items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10 md:flex"
+                className="hidden items-center gap-2 rounded-full bg-[#0E0E10] px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)] md:flex"
               >
                 Get a Quote
                 <ArrowRight className="h-3.5 w-3.5" />
@@ -124,7 +124,7 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className={`flex items-center justify-between border-b border-neutral-100 py-5 text-2xl font-medium transition-colors ${
                       pathname === link.href
-                        ? "text-neutral-900"
+                        ? "text-[#059669]"
                         : "text-neutral-400 hover:text-neutral-900"
                     }`}
                   >
@@ -142,7 +142,7 @@ export default function Navbar() {
                 <Link
                   href="/pricing-calculator"
                   onClick={closeMenu}
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-neutral-900 py-4 text-base font-medium text-white"
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-[#0E0E10] py-4 text-base font-medium text-white"
                 >
                   Get a Quote
                   <ArrowRight className="h-4 w-4" />

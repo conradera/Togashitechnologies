@@ -13,6 +13,7 @@ import {
   Headphones,
   Shield,
   Globe,
+  Layers,
   Zap,
   BarChart3,
   GraduationCap,
@@ -39,6 +40,22 @@ import SectionHeading from "@/components/SectionHeading";
 /* ─── SERVICE DATA (Tiered: Core → Supporting) ─── */
 
 const coreServices = [
+  {
+    icon: Globe,
+    title: "Website Development",
+    outcome:
+      "Establish a powerful online presence with fast, responsive, and SEO-optimized websites that convert visitors into customers.",
+    features: ["Corporate Sites", "E-commerce", "SEO Optimized"],
+    href: "/services#website",
+  },
+  {
+    icon: Layers,
+    title: "Systems Development",
+    outcome:
+      "Streamline complex operations with integrated systems that connect departments, automate processes, and provide real-time visibility.",
+    features: ["Business Systems", "Workflow Automation", "Real-time Analytics"],
+    href: "/services#systems",
+  },
   {
     icon: Code2,
     title: "Custom Software Development",
@@ -349,7 +366,7 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
               >
                 <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-1.5 text-xs font-medium text-neutral-600 shadow-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-neutral-900 animate-pulse" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#059669] animate-pulse" />
                   Togashi Technologies Co. Ltd
                 </span>
               </motion.div>
@@ -375,7 +392,7 @@ export default function Home() {
               >
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/10"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#0E0E10] px-8 py-4 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-xl hover:shadow-[rgba(5,150,105,0.15)]"
                 >
                   Book a Free Consultation
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -435,7 +452,7 @@ export default function Home() {
                     : "rounded-b-2xl sm:rounded-r-2xl sm:rounded-bl-none"
                 }`}
               >
-                <span className="text-3xl font-bold text-neutral-900">
+                <span className="text-3xl font-bold text-[#059669]">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </span>
                 <span className="mt-1 text-xs font-medium text-neutral-500">
@@ -468,7 +485,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <span className="text-4xl font-bold text-neutral-900">
+                <span className="text-4xl font-bold text-[#059669]">
                   {item.metric}
                 </span>
                 <p className="mt-2 text-sm font-medium text-neutral-700">
@@ -518,7 +535,7 @@ export default function Home() {
                   href={service.href}
                   className="group flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-xl hover:shadow-neutral-900/[0.06]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 transition-colors group-hover:bg-neutral-900">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 transition-colors group-hover:bg-[#0E0E10]">
                     <service.icon className="h-5 w-5 text-neutral-600 transition-colors group-hover:text-white" />
                   </div>
 
@@ -602,7 +619,7 @@ export default function Home() {
       </section>
 
       {/* ────── WHY CHOOSE US ────── */}
-      <section className="relative bg-neutral-950 py-32 text-white">
+      <section className="relative bg-[#0E0E10] py-32 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
@@ -622,7 +639,7 @@ export default function Home() {
               >
                 Why Togashi
                 <br />
-                <span className="text-neutral-500">Technologies?</span>
+                <span className="text-[#059669]">Technologies?</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -644,7 +661,7 @@ export default function Home() {
               >
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-6 py-3 text-sm font-medium text-white transition-all hover:border-neutral-400 hover:bg-neutral-800"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#1F1F23] px-6 py-3 text-sm font-medium text-white transition-all hover:border-neutral-400 hover:bg-[#17171A]"
                 >
                   Learn about us
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -660,10 +677,10 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group rounded-2xl border border-neutral-800 p-6 transition-all hover:-translate-y-1 hover:border-neutral-600 hover:bg-neutral-800/60 hover:shadow-lg hover:shadow-black/20"
+                  className="group rounded-2xl border border-[#1F1F23] p-6 transition-all hover:-translate-y-1 hover:border-[#1F1F23] hover:bg-[#17171A]/60 hover:shadow-lg hover:shadow-black/20"
                 >
-                  <item.icon className="h-5 w-5 text-neutral-500 transition-colors group-hover:text-white" />
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-neutral-600">
+                  <item.icon className="h-5 w-5 text-neutral-500 transition-colors group-hover:text-[#059669]" />
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[#059669]">
                     {item.stat}
                   </p>
                   <h3 className="mt-1 text-base font-bold leading-snug">
@@ -680,14 +697,14 @@ export default function Home() {
       </section>
 
       {/* ────── PROCESS ────── */}
-      <section className="bg-neutral-900 py-32 text-white">
+      <section className="bg-[#17171A] py-32 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center">
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="inline-block rounded-full border border-neutral-700 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-neutral-400"
+              className="inline-block rounded-full border border-[rgba(5,150,105,0.2)] px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-[#059669]"
             >
               Our Methodology
             </motion.span>
@@ -710,7 +727,7 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="mt-16 grid gap-px rounded-2xl border border-neutral-700 bg-neutral-700 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-px rounded-2xl border border-[#1F1F23] bg-[#1F1F23] sm:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((step, i) => (
               <motion.div
                 key={step.step}
@@ -718,7 +735,7 @@ export default function Home() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className={`group bg-neutral-900 p-8 transition-colors hover:bg-neutral-800 ${
+                className={`group bg-[#17171A] p-8 transition-colors hover:bg-[#1F1F23] ${
                   i === 0
                     ? "rounded-tl-2xl"
                     : i === 2
@@ -731,10 +748,10 @@ export default function Home() {
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <span className="text-3xl font-bold text-neutral-700 transition-colors group-hover:text-neutral-500">
+                  <span className="text-3xl font-bold text-neutral-700 transition-colors group-hover:text-[#059669]">
                     {step.step}
                   </span>
-                  <step.icon className="h-5 w-5 text-neutral-600 transition-colors group-hover:text-white" />
+                  <step.icon className="h-5 w-5 text-neutral-600 transition-colors group-hover:text-[#059669]" />
                 </div>
                 <h3 className="mt-4 text-lg font-bold text-white">
                   {step.title}
@@ -767,7 +784,7 @@ export default function Home() {
                 transition={{ delay: i * 0.08 }}
                 className="group rounded-2xl border border-neutral-200 p-6 transition-all hover:-translate-y-1 hover:border-neutral-300 hover:shadow-lg hover:shadow-neutral-900/[0.04]"
               >
-                <item.icon className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-neutral-900" />
+                <item.icon className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-[#059669]" />
                 <h3 className="mt-4 text-base font-bold text-neutral-900">
                   {item.sector}
                 </h3>
@@ -816,7 +833,7 @@ export default function Home() {
       </section>
 
       {/* ────── FINAL CTA ────── */}
-      <section className="relative overflow-hidden bg-neutral-950 py-32">
+      <section className="relative overflow-hidden bg-[#0E0E10] py-32">
         <div className="grid-pattern absolute inset-0 opacity-[0.03]" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -828,7 +845,7 @@ export default function Home() {
             >
               Let&apos;s Architect Your Next
               <br />
-              <span className="text-neutral-500">Digital Breakthrough</span>
+              <span className="text-[#059669]">Digital Breakthrough</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -857,7 +874,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/pricing-calculator"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-700 px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-neutral-800"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F1F23] px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-[#17171A]"
               >
                 Calculate Pricing
               </Link>

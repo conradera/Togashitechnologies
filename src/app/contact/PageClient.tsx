@@ -151,7 +151,7 @@ export default function ContactPage() {
                       Need pricing fast? Use our{" "}
                       <a
                         href="/pricing-calculator"
-                        className="font-medium text-neutral-900 underline underline-offset-2"
+                        className="font-medium text-[#059669] underline underline-offset-2"
                       >
                         pricing calculator
                       </a>{" "}
@@ -203,7 +203,7 @@ export default function ContactPage() {
                             onChange={(e) =>
                               setFormData({ ...formData, name: e.target.value })
                             }
-                            className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                            className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                             placeholder="John Doe"
                           />
                         </div>
@@ -221,7 +221,7 @@ export default function ContactPage() {
                                 email: e.target.value,
                               })
                             }
-                            className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                            className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                             placeholder="john@company.com"
                           />
                         </div>
@@ -240,7 +240,7 @@ export default function ContactPage() {
                               company: e.target.value,
                             })
                           }
-                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           placeholder="Company name"
                         />
                       </motion.div>
@@ -258,7 +258,7 @@ export default function ContactPage() {
                                 service: e.target.value,
                               })
                             }
-                            className="mt-1.5 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                            className="mt-1.5 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           >
                             <option value="">Select a service</option>
                             <option value="project-management">Project Management Services</option>
@@ -286,7 +286,7 @@ export default function ContactPage() {
                                 budget: e.target.value,
                               })
                             }
-                            className="mt-1.5 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                            className="mt-1.5 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           >
                             <option value="">Select budget range</option>
                             <option value="<5k">Under $5,000</option>
@@ -311,7 +311,7 @@ export default function ContactPage() {
                             })
                           }
                           rows={5}
-                          className="mt-1.5 w-full resize-none rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                          className="mt-1.5 w-full resize-none rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           placeholder="Tell us about your project, goals, and timeline..."
                         />
                       </motion.div>
@@ -322,7 +322,7 @@ export default function ContactPage() {
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.98 }}
                       type="submit"
-                      className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-neutral-900 py-4 text-sm font-medium text-white transition-all hover:bg-neutral-800"
+                      className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0E0E10] py-4 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
                     >
                       Send Message
                       <Send className="h-4 w-4" />
@@ -346,7 +346,7 @@ export default function ContactPage() {
                       stiffness: 200,
                       damping: 12,
                     }}
-                    className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-900"
+                    className="flex h-16 w-16 items-center justify-center rounded-full bg-[#059669]"
                   >
                     <Check className="h-8 w-8 text-white" />
                   </motion.div>

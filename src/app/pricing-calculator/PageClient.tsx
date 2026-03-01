@@ -355,7 +355,7 @@ export default function PricingCalculator() {
                     onClick={() => i < step && setStep(i)}
                     className={`flex h-8 items-center gap-2 rounded-full px-3 text-xs font-medium transition-all ${
                       i === step
-                        ? "bg-neutral-900 text-white"
+                        ? "bg-[#059669] text-white"
                         : i < step
                         ? "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
                         : "bg-neutral-50 text-neutral-400"
@@ -389,7 +389,7 @@ export default function PricingCalculator() {
                 <p className="text-xs font-medium uppercase tracking-wider text-neutral-400">
                   Estimated Investment
                 </p>
-                <p className="mt-2 text-4xl font-semibold tabular-nums text-neutral-900">
+                <p className="mt-2 text-4xl font-semibold tabular-nums text-[#059669]">
                   <AnimatedPrice value={estimate} />
                   <span className="text-lg font-normal text-neutral-400">
                     {" "}
@@ -433,7 +433,7 @@ export default function PricingCalculator() {
                           transition={{ duration: 0.25 }}
                           className={`group flex items-start gap-4 rounded-xl border p-5 text-left transition-all ${
                             form.service === opt.id
-                              ? "border-neutral-900 bg-neutral-900 text-white"
+                              ? "border-[#059669] bg-[#0E0E10] text-white"
                               : "border-neutral-200 bg-white hover:border-neutral-300"
                           }`}
                         >
@@ -498,7 +498,7 @@ export default function PricingCalculator() {
                           transition={{ duration: 0.25 }}
                           className={`rounded-xl border p-5 text-left transition-all ${
                             form.size === opt.id
-                              ? "border-neutral-900 bg-neutral-900 text-white"
+                              ? "border-[#059669] bg-[#0E0E10] text-white"
                               : "border-neutral-200 bg-white hover:border-neutral-300"
                           }`}
                         >
@@ -546,7 +546,7 @@ export default function PricingCalculator() {
                           transition={{ duration: 0.25 }}
                           className={`rounded-xl border p-5 text-left transition-all ${
                             form.timeline === opt.id
-                              ? "border-neutral-900 bg-neutral-900 text-white"
+                              ? "border-[#059669] bg-[#0E0E10] text-white"
                               : "border-neutral-200 bg-white hover:border-neutral-300"
                           }`}
                         >
@@ -606,7 +606,7 @@ export default function PricingCalculator() {
                             }
                             className={`flex items-center justify-between rounded-xl border p-4 text-left transition-all ${
                               selected
-                                ? "border-neutral-900 bg-neutral-50"
+                                ? "border-[#059669] bg-neutral-50"
                                 : "border-neutral-200 bg-white hover:border-neutral-300"
                             }`}
                           >
@@ -614,7 +614,7 @@ export default function PricingCalculator() {
                               <div
                                 className={`flex h-5 w-5 items-center justify-center rounded border ${
                                   selected
-                                    ? "border-neutral-900 bg-neutral-900"
+                                    ? "border-[#059669] bg-[#059669]"
                                     : "border-neutral-300"
                                 }`}
                               >
@@ -659,7 +659,7 @@ export default function PricingCalculator() {
                           onChange={(e) =>
                             setForm({ ...form, name: e.target.value })
                           }
-                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           placeholder="John Doe"
                         />
                       </div>
@@ -673,7 +673,7 @@ export default function PricingCalculator() {
                           onChange={(e) =>
                             setForm({ ...form, email: e.target.value })
                           }
-                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           placeholder="john@company.com"
                         />
                       </div>
@@ -687,7 +687,7 @@ export default function PricingCalculator() {
                           onChange={(e) =>
                             setForm({ ...form, company: e.target.value })
                           }
-                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                          className="mt-1.5 w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           placeholder="Company name"
                         />
                       </div>
@@ -701,7 +701,7 @@ export default function PricingCalculator() {
                             setForm({ ...form, details: e.target.value })
                           }
                           rows={4}
-                          className="mt-1.5 w-full resize-none rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-neutral-900"
+                          className="mt-1.5 w-full resize-none rounded-xl border border-neutral-200 px-4 py-3 text-sm outline-none transition-colors focus:border-[#059669]"
                           placeholder="Tell us about your project requirements..."
                         />
                       </div>
@@ -731,7 +731,7 @@ export default function PricingCalculator() {
                   disabled={!canProceed()}
                   className={`flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all ${
                     canProceed()
-                      ? "bg-neutral-900 text-white hover:bg-neutral-800"
+                      ? "bg-[#0E0E10] text-white hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
                       : "cursor-not-allowed bg-neutral-200 text-neutral-400"
                   }`}
                 >
@@ -744,7 +744,7 @@ export default function PricingCalculator() {
                   disabled={!canProceed()}
                   className={`flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all ${
                     canProceed()
-                      ? "bg-neutral-900 text-white hover:bg-neutral-800"
+                      ? "bg-[#0E0E10] text-white hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
                       : "cursor-not-allowed bg-neutral-200 text-neutral-400"
                   }`}
                 >
@@ -772,7 +772,7 @@ export default function PricingCalculator() {
                 stiffness: 200,
                 damping: 12,
               }}
-              className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-neutral-900"
+              className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#059669]"
             >
               <Check className="h-8 w-8 text-white" />
             </motion.div>
@@ -795,7 +795,7 @@ export default function PricingCalculator() {
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 href="/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-neutral-800"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E0E10] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#17171A]"
               >
                 Back to Home
               </Link>

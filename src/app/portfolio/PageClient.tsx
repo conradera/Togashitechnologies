@@ -179,7 +179,7 @@ export default function PortfolioPage() {
                 onClick={() => setActiveFilter(f.id)}
                 className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
                   activeFilter === f.id
-                    ? "bg-neutral-900 text-white"
+                    ? "bg-[#0E0E10] text-white"
                     : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
                 }`}
               >
@@ -231,7 +231,7 @@ export default function PortfolioPage() {
                           transition={{ delay: ri * 0.08, duration: 0.3 }}
                           className="flex items-center gap-2 text-sm text-neutral-600"
                         >
-                          <div className="h-1 w-1 shrink-0 rounded-full bg-neutral-400" />
+                          <div className="h-1 w-1 shrink-0 rounded-full bg-[#059669]" />
                           {r}
                         </motion.li>
                       ))}
@@ -275,7 +275,7 @@ export default function PortfolioPage() {
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/pricing-calculator"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-sm font-medium text-white transition-all hover:bg-neutral-800"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#0E0E10] px-8 py-4 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
             >
               Get a Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

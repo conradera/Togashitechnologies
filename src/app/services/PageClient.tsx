@@ -10,6 +10,7 @@ import {
   Smartphone,
   Headphones,
   Cpu,
+  Globe,
   Layers,
   Check,
   GraduationCap,
@@ -62,6 +63,64 @@ const categories: Category[] = [
     tagline:
       "From MVP to enterprise platform — we engineer software that drives revenue, automates operations, and scales without limits.",
     services: [
+      {
+        id: "website",
+        icon: Globe,
+        title: "Website Development",
+        subtitle: "Modern Web Experiences",
+        timeline: "2-6 weeks",
+        idealFor: "Businesses & organizations",
+        outcome:
+          "Establish a powerful online presence with fast, responsive, and SEO-optimized websites that convert visitors into customers.",
+        description:
+          "We design and develop modern, high-performance websites — from corporate sites and landing pages to e-commerce platforms and content management systems. Every site is built for speed, accessibility, and conversion.",
+        features: [
+          "Corporate & business websites",
+          "E-commerce platforms",
+          "Landing pages & marketing sites",
+          "Content management systems (CMS)",
+          "SEO optimization & performance",
+          "Responsive & mobile-first design",
+        ],
+        deliverables: [
+          "Custom website design & development",
+          "CMS setup & configuration",
+          "SEO audit & optimization",
+          "Performance optimization report",
+          "Training & handover documentation",
+        ],
+        cta: "Request a Website Proposal",
+        flagship: true,
+      },
+      {
+        id: "systems",
+        icon: Layers,
+        title: "Systems Development",
+        subtitle: "Integrated Business Systems",
+        timeline: "4-12 weeks",
+        idealFor: "Enterprises & institutions",
+        outcome:
+          "Streamline complex operations with integrated systems that connect departments, automate processes, and provide real-time visibility across your organization.",
+        description:
+          "We build robust, integrated business systems — from inventory and supply chain management to HR platforms and institutional management systems. Designed for reliability, scalability, and seamless cross-department coordination.",
+        features: [
+          "Inventory & supply chain systems",
+          "Human resource management systems",
+          "Institutional management platforms",
+          "Document management systems",
+          "Workflow automation engines",
+          "Real-time reporting & analytics",
+        ],
+        deliverables: [
+          "System architecture document",
+          "Fully deployed business system",
+          "Integration with existing tools",
+          "User training & documentation",
+          "Post-deployment support plan",
+        ],
+        cta: "Request a Systems Proposal",
+        flagship: true,
+      },
       {
         id: "custom",
         icon: Code2,
@@ -379,6 +438,8 @@ const allServices = categories.flatMap((c) => c.services);
 /* ─── COMPARISON TABLE DATA ─── */
 
 const comparisonRows = [
+  { service: "Website Development", timeline: "2-6 weeks", startingFrom: "$2,000", idealFor: "All businesses", engagement: "Project-based" },
+  { service: "Systems Development", timeline: "4-12 weeks", startingFrom: "$5,000", idealFor: "Enterprises & institutions", engagement: "Project-based" },
   { service: "Custom Software", timeline: "3-10 weeks", startingFrom: "$4,000", idealFor: "Enterprises", engagement: "Project-based" },
   { service: "SaaS Development", timeline: "4-12 weeks", startingFrom: "$5,000", idealFor: "Startups", engagement: "Project-based" },
   { service: "Mobile Apps", timeline: "3-8 weeks", startingFrom: "$4,500", idealFor: "Consumer brands", engagement: "Project-based" },
@@ -492,7 +553,7 @@ function ServiceBlock({ service, index }: { service: Service; index: number }) {
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <Link
               href="/pricing-calculator"
-              className="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#0E0E10] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
             >
               {service.cta}
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -600,7 +661,7 @@ export default function ServicesPage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/10"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#0E0E10] px-8 py-4 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-xl hover:shadow-[rgba(5,150,105,0.15)]"
               >
                 Book a Free Consultation
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -630,7 +691,7 @@ export default function ServicesPage() {
                 viewport={{ once: true }}
                 className="px-4 py-6 text-center sm:px-6"
               >
-                <span className="text-2xl font-bold text-neutral-900">
+                <span className="text-2xl font-bold text-[#059669]">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </span>
                 <p className="mt-1 text-xs font-medium text-neutral-500">
@@ -850,7 +911,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ─── FINAL CTA ─── */}
-      <section className="bg-neutral-950 py-24">
+      <section className="bg-[#0E0E10] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <motion.h2
@@ -881,15 +942,15 @@ export default function ServicesPage() {
               className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-400"
             >
               <span className="flex items-center gap-1.5">
-                <Check className="h-3.5 w-3.5 text-white" />
+                <Check className="h-3.5 w-3.5 text-[#059669]" />
                 Dedicated team
               </span>
               <span className="flex items-center gap-1.5">
-                <Check className="h-3.5 w-3.5 text-white" />
+                <Check className="h-3.5 w-3.5 text-[#059669]" />
                 Transparent pricing
               </span>
               <span className="flex items-center gap-1.5">
-                <Check className="h-3.5 w-3.5 text-white" />
+                <Check className="h-3.5 w-3.5 text-[#059669]" />
                 Enterprise-grade security
               </span>
             </motion.div>
@@ -910,7 +971,7 @@ export default function ServicesPage() {
               </Link>
               <Link
                 href="/pricing-calculator"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-700 px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-neutral-800"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F1F23] px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-[#17171A]"
               >
                 Pricing Calculator
               </Link>

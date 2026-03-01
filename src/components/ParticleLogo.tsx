@@ -162,7 +162,7 @@ export default function ParticleLogo() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(23, 23, 23, ${p.opacity * 0.85})`;
+        ctx.fillStyle = `rgba(5, 150, 105, ${p.opacity * 0.85})`;
         ctx.fill();
       }
 
