@@ -305,22 +305,17 @@ const HERO_LINE1 = "Engineering Digital";
 const HERO_LINE2 = "Transformation";
 const FULL_TEXT = HERO_LINE1 + "\n" + HERO_LINE2;
 const TYPING_SPEED = 60;
-const PAUSE_AFTER_TYPED = 2500;
 
 function HeroTyping() {
   const [charCount, setCharCount] = useState(0);
+  const done = charCount >= FULL_TEXT.length;
 
   useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout>;
+    if (done) return;
 
-    if (charCount < FULL_TEXT.length) {
-      timeout = setTimeout(() => setCharCount((c) => c + 1), TYPING_SPEED);
-    } else {
-      timeout = setTimeout(() => setCharCount(0), PAUSE_AFTER_TYPED);
-    }
-
+    const timeout = setTimeout(() => setCharCount((c) => c + 1), TYPING_SPEED);
     return () => clearTimeout(timeout);
-  }, [charCount]);
+  }, [charCount, done]);
 
   const line1Typed = FULL_TEXT.slice(0, Math.min(charCount, HERO_LINE1.length));
   const line2Typed =
@@ -338,7 +333,7 @@ function HeroTyping() {
     >
       <span>
         {line1Typed}
-        {cursorOnLine1 && (
+        {cursorOnLine1 && !done && (
           <span className="ml-0.5 inline-block h-[0.9em] w-[3px] translate-y-[0.1em] animate-pulse bg-neutral-900" />
         )}
       </span>
@@ -347,7 +342,7 @@ function HeroTyping() {
           <br />
           <span className="text-neutral-400">
             {line2Typed}
-            {!cursorOnLine1 && (
+            {!cursorOnLine1 && !done && (
               <span className="ml-0.5 inline-block h-[0.9em] w-[3px] translate-y-[0.1em] animate-pulse bg-neutral-400" />
             )}
           </span>
