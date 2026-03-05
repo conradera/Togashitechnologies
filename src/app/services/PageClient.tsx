@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
-  Cloud,
+  BrainCircuit,
   Code2,
   Smartphone,
   Headphones,
@@ -151,32 +151,32 @@ const categories: Category[] = [
         flagship: true,
       },
       {
-        id: "saas",
-        icon: Cloud,
-        title: "SaaS Development",
-        subtitle: "Scalable Cloud Platforms",
+        id: "ai-ml",
+        icon: BrainCircuit,
+        title: "AI/ML Development Services & Training",
+        subtitle: "Intelligent Solutions & Capacity Building",
         timeline: "4-12 weeks",
-        idealFor: "Startups & digital-first businesses",
+        idealFor: "Enterprises, startups & teams adopting AI",
         outcome:
-          "Launch subscription-ready platforms that scale from 100 to 100,000 users without re-architecting your infrastructure.",
+          "Leverage custom AI and machine learning solutions to automate processes, uncover insights, and upskill your team to stay ahead of the curve.",
         description:
-          "We design and deploy multi-tenant SaaS platforms with automated billing, role-based access, and cloud-native architecture. Built to generate recurring revenue from day one.",
+          "We build tailored AI/ML solutions — from predictive analytics and natural language processing to computer vision and recommendation engines — and provide hands-on training to empower your team to maintain and extend these systems.",
         features: [
-          "Subscription-based web platforms",
-          "Enterprise management systems",
-          "Industry-specific digital platforms",
-          "Cloud-native applications",
-          "Multi-tenant architecture",
-          "Automated billing & subscriptions",
+          "Custom AI/ML model development",
+          "Data pipeline & feature engineering",
+          "Natural language processing (NLP)",
+          "Computer vision solutions",
+          "AI strategy & consulting",
+          "Team training & workshops",
         ],
         deliverables: [
-          "Architecture design document",
-          "Fully deployed SaaS platform",
-          "Admin dashboard",
-          "API documentation",
-          "CI/CD pipeline setup",
+          "Trained & deployed ML models",
+          "Data pipeline architecture",
+          "Model performance reports",
+          "API integration documentation",
+          "Training workshop materials",
         ],
-        cta: "Request SaaS Cost Estimate",
+        cta: "Request AI/ML Consultation",
         flagship: true,
       },
       {
@@ -435,23 +435,6 @@ const categories: Category[] = [
 
 const allServices = categories.flatMap((c) => c.services);
 
-/* ─── COMPARISON TABLE DATA ─── */
-
-const comparisonRows = [
-  { service: "Website Development", timeline: "2-6 weeks", startingFrom: "$2,000", idealFor: "All businesses", engagement: "Project-based" },
-  { service: "Systems Development", timeline: "4-12 weeks", startingFrom: "$5,000", idealFor: "Enterprises & institutions", engagement: "Project-based" },
-  { service: "Custom Software", timeline: "3-10 weeks", startingFrom: "$4,000", idealFor: "Enterprises", engagement: "Project-based" },
-  { service: "SaaS Development", timeline: "4-12 weeks", startingFrom: "$5,000", idealFor: "Startups", engagement: "Project-based" },
-  { service: "Mobile Apps", timeline: "3-8 weeks", startingFrom: "$4,500", idealFor: "Consumer brands", engagement: "Project-based" },
-  { service: "Managed IT", timeline: "Ongoing", startingFrom: "$2,000/mo", idealFor: "All organizations", engagement: "Retainer" },
-  { service: "IT Consultancy", timeline: "1-4 weeks", startingFrom: "$3,000", idealFor: "Enterprises", engagement: "Project-based" },
-  { service: "CTO-as-a-Service", timeline: "Ongoing", startingFrom: "$3,500/mo", idealFor: "Growth-stage", engagement: "Retainer" },
-  { service: "IT Training", timeline: "1-8 weeks", startingFrom: "$2,500", idealFor: "Corporates & gov", engagement: "Project-based" },
-  { service: "BPO Services", timeline: "Ongoing", startingFrom: "$2,000/mo", idealFor: "Scaling companies", engagement: "Retainer" },
-  { service: "Brand Design", timeline: "1-4 weeks", startingFrom: "$1,500", idealFor: "All brands", engagement: "Project-based" },
-  { service: "Project Management", timeline: "Ongoing", startingFrom: "$3,000/mo", idealFor: "Complex initiatives", engagement: "Retainer" },
-];
-
 /* ─── WHO THIS IS FOR ─── */
 
 const audiences = [
@@ -551,13 +534,15 @@ function ServiceBlock({ service, index }: { service: Service; index: number }) {
 
           {/* CTA */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <Link
-              href="/pricing-calculator"
+            <a
+              href="https://wa.me/256780650952"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-[#0E0E10] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
             >
               {service.cta}
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
             <span className="text-xs text-neutral-400">
               Free consultation &middot; No obligation &middot; 24-hour response
             </span>
@@ -716,12 +701,6 @@ export default function ServicesPage() {
                 {cat.label}
               </a>
             ))}
-            <a
-              href="#compare"
-              className="shrink-0 rounded-full px-4 py-2 text-sm font-medium text-neutral-600 transition-all hover:bg-neutral-100 hover:text-neutral-900"
-            >
-              Compare
-            </a>
           </nav>
         </div>
       </div>
@@ -755,91 +734,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── COMPARISON TABLE ─── */}
-      <section
-        id="compare"
-        className="scroll-mt-32 border-t border-neutral-200 bg-neutral-50 py-24"
-      >
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <span className="inline-block rounded-full border border-neutral-200 bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-              Quick Comparison
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-              Find the right service faster
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-neutral-500">
-              Compare timelines, pricing, and engagement models at a glance.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mt-12 overflow-x-auto rounded-2xl border border-neutral-200 bg-white shadow-sm"
-          >
-            <table className="w-full min-w-[640px] text-left text-sm">
-              <thead>
-                <tr className="border-b border-neutral-200 bg-neutral-50">
-                  <th className="px-6 py-4 font-semibold text-neutral-900">Service</th>
-                  <th className="px-6 py-4 font-semibold text-neutral-900">Timeline</th>
-                  <th className="px-6 py-4 font-semibold text-neutral-900">Starting From</th>
-                  <th className="px-6 py-4 font-semibold text-neutral-900">Ideal For</th>
-                  <th className="px-6 py-4 font-semibold text-neutral-900">Engagement</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((row, i) => (
-                  <tr
-                    key={row.service}
-                    className={`border-b border-neutral-100 transition-colors hover:bg-neutral-50 ${
-                      i === comparisonRows.length - 1 ? "border-b-0" : ""
-                    }`}
-                  >
-                    <td className="px-6 py-4 font-medium text-neutral-900">
-                      {row.service}
-                    </td>
-                    <td className="px-6 py-4 text-neutral-600">{row.timeline}</td>
-                    <td className="px-6 py-4 font-medium text-neutral-900">
-                      {row.startingFrom}
-                    </td>
-                    <td className="px-6 py-4 text-neutral-600">{row.idealFor}</td>
-                    <td className="px-6 py-4">
-                      <span
-                        className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
-                          row.engagement === "Retainer"
-                            ? "bg-neutral-900 text-white"
-                            : "bg-neutral-100 text-neutral-600"
-                        }`}
-                      >
-                        {row.engagement}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </motion.div>
-
-          <div className="mt-8 text-center">
-            <Link
-              href="/pricing-calculator"
-              className="group inline-flex items-center gap-2 text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
-            >
-              Get exact pricing with our calculator
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
         </div>
       </section>
@@ -969,12 +863,14 @@ export default function ServicesPage() {
                 Book Your Free Consultation
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link
-                href="/pricing-calculator"
+              <a
+                href="https://wa.me/256780650952"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F1F23] px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-[#17171A]"
               >
-                Pricing Calculator
-              </Link>
+                Get a Quote
+              </a>
             </motion.div>
           </div>
         </div>

@@ -128,7 +128,7 @@ export default function AboutPage() {
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-neutral-500">
                 Togashi Technologies is a technology company that builds
-                scalable SaaS platforms, custom enterprise software, and
+                scalable AI-powered platforms, custom enterprise software, and
                 intelligent digital systems. We serve startups, SMEs,
                 enterprises, and government institutions — locally and globally.
               </p>
@@ -220,7 +220,7 @@ export default function AboutPage() {
               </h2>
               <p className="mt-4 leading-relaxed text-neutral-400">
                 To become Africa&apos;s most trusted technology partner for
-                mission-critical systems — delivering globally competitive SaaS
+                mission-critical systems — delivering globally competitive AI-powered
                 platforms and enterprise solutions that organizations depend on
                 for growth.
               </p>
@@ -381,10 +381,10 @@ export default function AboutPage() {
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
-                  href="/portfolio"
+                  href="/services"
                   className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-6 py-3 text-sm font-medium text-neutral-700 transition-all hover:border-neutral-300"
                 >
-                  View Case Studies
+                  View Our Services
                 </Link>
               </div>
             </motion.div>
@@ -483,10 +483,10 @@ export default function AboutPage() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/portfolio"
+              href="/services"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F1F23] px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-[#17171A]"
             >
-              View Our Case Studies
+              View Our Services
             </Link>
           </motion.div>
         </div>

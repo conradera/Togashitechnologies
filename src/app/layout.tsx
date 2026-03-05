@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Togashi Technologies | SaaS, Software & Digital Transformation",
+  title: "Togashi Technologies | AI/ML, Software & Digital Transformation",
   description:
-    "Forward-thinking technology company specializing in SaaS solutions, custom software development, mobile applications, BPO, IT consultancy, and digital transformation.",
+    "Forward-thinking technology company specializing in AI/ML solutions, custom software development, mobile applications, BPO, IT consultancy, and digital transformation.",
 };
 
 export default function RootLayout({

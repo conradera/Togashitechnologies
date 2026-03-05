@@ -8,7 +8,7 @@ const sections = [
   {
     title: "Services",
     content:
-      "Togashi Technologies provides custom software development, SaaS solutions, mobile applications, IT consultancy, managed IT services, BPO, and related technology services. All engagements are governed by a separate Statement of Work (SOW) or service agreement that details scope, deliverables, timeline, and payment terms.",
+      "Togashi Technologies provides custom software development, AI/ML solutions, mobile applications, IT consultancy, managed IT services, BPO, and related technology services. All engagements are governed by a separate Statement of Work (SOW) or service agreement that details scope, deliverables, timeline, and payment terms.",
   },
   {
     title: "Intellectual Property",

@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   ArrowUpRight,
-  Cloud,
   Code2,
   Cpu,
   Smartphone,
@@ -33,7 +33,6 @@ import {
   Users,
   Phone,
 } from "lucide-react";
-import AnimatedCounter from "@/components/AnimatedCounter";
 import ParticleLogo from "@/components/ParticleLogo";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -43,6 +42,7 @@ const coreServices = [
   {
     icon: Globe,
     title: "Website Development",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
     outcome:
       "Establish a powerful online presence with fast, responsive, and SEO-optimized websites that convert visitors into customers.",
     features: ["Corporate Sites", "E-commerce", "SEO Optimized"],
@@ -51,6 +51,7 @@ const coreServices = [
   {
     icon: Layers,
     title: "Systems Development",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
     outcome:
       "Streamline complex operations with integrated systems that connect departments, automate processes, and provide real-time visibility.",
     features: ["Business Systems", "Workflow Automation", "Real-time Analytics"],
@@ -59,22 +60,25 @@ const coreServices = [
   {
     icon: Code2,
     title: "Custom Software Development",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
     outcome:
       "Eliminate operational bottlenecks with tailored systems that automate workflows and reduce manual overhead by up to 60%.",
     features: ["ERP Systems", "API Integration", "Web Portals"],
     href: "/services#custom",
   },
   {
-    icon: Cloud,
-    title: "SaaS Development",
+    icon: Cpu,
+    title: "AI/ML Development Services & Training",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
     outcome:
-      "Launch subscription-ready platforms that scale from 100 to 100,000 users without re-architecting your infrastructure.",
-    features: ["Multi-tenant", "Subscription Billing", "Cloud-Native"],
-    href: "/services#saas",
+      "Harness artificial intelligence and machine learning to automate processes, uncover insights, and build intelligent products that give you a competitive edge.",
+    features: ["Custom AI Models", "ML Pipelines", "AI Training & Workshops"],
+    href: "/services#ai-ml",
   },
   {
     icon: Cpu,
     title: "IT Consultancy & Digital Transformation",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     outcome:
       "Modernize legacy systems and align your technology stack with business goals — reducing IT costs while accelerating growth.",
     features: ["Cloud Migration", "Cybersecurity", "Process Automation"],
@@ -83,6 +87,7 @@ const coreServices = [
   {
     icon: Wrench,
     title: "Managed IT Services",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
     outcome:
       "Achieve 99.9% uptime with proactive monitoring, SLA-backed support, and AI-powered infrastructure management.",
     features: ["24/7 Monitoring", "AI/ML Solutions", "IT Maintenance"],
@@ -91,6 +96,7 @@ const coreServices = [
   {
     icon: Smartphone,
     title: "Mobile Applications",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
     outcome:
       "Put your business in every pocket with high-performance apps that drive engagement and revenue on iOS and Android.",
     features: ["Cross-Platform", "Native Performance", "Scalable Backend"],
@@ -102,30 +108,35 @@ const supportingServices = [
   {
     icon: Headphones,
     title: "BPO Services",
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80",
     outcome: "Scale operations without scaling headcount through IT-enabled outsourcing.",
     href: "/services#bpo",
   },
   {
     icon: GraduationCap,
     title: "IT Training & Capacity Building",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80",
     outcome: "Upskill your workforce with certified programs that close the digital skills gap.",
     href: "/services#training",
   },
   {
     icon: Compass,
     title: "Strategic Advisory & CTO-as-a-Service",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
     outcome: "Access C-level technology leadership and strategic roadmapping on demand.",
     href: "/services#advisory",
   },
   {
     icon: ClipboardList,
     title: "Project Management",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&q=80",
     outcome: "Deliver complex projects on time, within budget, and aligned to business KPIs.",
     href: "/services#project-management",
   },
   {
     icon: Palette,
     title: "Graphics & Brand Design",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
     outcome: "Build a visual identity that communicates authority and wins trust at first glance.",
     href: "/services#graphics",
   },
@@ -235,7 +246,7 @@ const industries = [
   },
   {
     sector: "SMEs & Startups",
-    proof: "Financial management SaaS platform serving 200+ SMEs — 60% reduction in manual bookkeeping.",
+    proof: "AI-powered financial management platform serving 200+ SMEs — 60% reduction in manual bookkeeping.",
     icon: TrendingUp,
   },
 ];
@@ -251,7 +262,7 @@ const testimonials = [
   },
   {
     quote:
-      "The SaaS platform they built for us has scaled seamlessly from 50 to 200+ business accounts. Their architecture decisions were forward-thinking and spot-on.",
+      "The AI-driven platform they built for us has scaled seamlessly from 50 to 200+ business accounts. Their architecture decisions were forward-thinking and spot-on.",
     name: "CTO",
     company: "FinTech Startup",
   },
@@ -279,7 +290,7 @@ const caseResults = [
   {
     metric: "3x",
     label: "Faster time-to-market",
-    context: "SaaS product launch",
+    context: "AI/ML product launch",
   },
   {
     metric: "99.9%",
@@ -379,7 +390,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-500"
               >
-                We architect scalable SaaS platforms, custom enterprise software,
+                We architect AI-powered solutions, custom enterprise software,
                 and intelligent digital systems that deliver measurable ROI for
                 organizations across Africa and globally.
               </motion.p>
@@ -398,10 +409,10 @@ export default function Home() {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
-                  href="/portfolio"
+                  href="/services"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white px-8 py-4 text-sm font-medium text-neutral-700 transition-all hover:border-neutral-300 hover:shadow-md"
                 >
-                  View Our Work
+                  View Our Services
                 </Link>
               </motion.div>
 
@@ -427,40 +438,6 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Stats Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-20 grid grid-cols-2 gap-px rounded-2xl border border-neutral-200 bg-neutral-200 shadow-sm sm:grid-cols-4 lg:mt-32"
-          >
-            {[
-              { value: 50, suffix: "+", label: "Projects Delivered" },
-              { value: 99, suffix: "%", label: "Client Satisfaction" },
-              { value: 7, suffix: "+", label: "Industries Served" },
-              { value: 24, suffix: "/7", label: "Support Available" },
-            ].map((stat, i) => (
-              <div
-                key={stat.label}
-                className={`flex flex-col items-center justify-center bg-white px-6 py-8 ${
-                  i === 0
-                    ? "rounded-tl-2xl sm:rounded-l-2xl"
-                    : i === 1
-                    ? "rounded-tr-2xl sm:rounded-none"
-                    : i === 2
-                    ? "sm:rounded-none"
-                    : "rounded-b-2xl sm:rounded-r-2xl sm:rounded-bl-none"
-                }`}
-              >
-                <span className="text-3xl font-bold text-[#059669]">
-                  <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-                </span>
-                <span className="mt-1 text-xs font-medium text-neutral-500">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
@@ -533,33 +510,45 @@ export default function Home() {
               >
                 <Link
                   href={service.href}
-                  className="group flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-xl hover:shadow-neutral-900/[0.06]"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-xl hover:shadow-neutral-900/[0.06]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 transition-colors group-hover:bg-[#0E0E10]">
-                    <service.icon className="h-5 w-5 text-neutral-600 transition-colors group-hover:text-white" />
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
 
-                  <h3 className="mt-6 text-lg font-semibold text-neutral-900">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-500">
-                    {service.outcome}
-                  </p>
+                  <div className="flex flex-1 flex-col p-8">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 transition-colors group-hover:bg-[#0E0E10]">
+                      <service.icon className="h-5 w-5 text-neutral-600 transition-colors group-hover:text-white" />
+                    </div>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {service.features.map((f) => (
-                      <span
-                        key={f}
-                        className="rounded-full border border-neutral-100 px-3 py-1 text-xs text-neutral-500"
-                      >
-                        {f}
-                      </span>
-                    ))}
-                  </div>
+                    <h3 className="mt-6 text-lg font-semibold text-neutral-900">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-500">
+                      {service.outcome}
+                    </p>
 
-                  <div className="mt-6 flex items-center gap-1 text-sm font-medium text-neutral-900 opacity-0 transition-opacity group-hover:opacity-100">
-                    Learn more
-                    <ArrowUpRight className="h-3.5 w-3.5" />
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {service.features.map((f) => (
+                        <span
+                          key={f}
+                          className="rounded-full border border-neutral-100 px-3 py-1 text-xs text-neutral-500"
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 flex items-center gap-1 text-sm font-medium text-neutral-900 opacity-0 transition-opacity group-hover:opacity-100">
+                      Learn more
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </div>
                   </div>
                 </Link>
               </motion.div>
@@ -589,18 +578,30 @@ export default function Home() {
               >
                 <Link
                   href={service.href}
-                  className="group flex h-full flex-col rounded-xl border border-neutral-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-lg hover:shadow-neutral-900/[0.04]"
+                  className="group flex h-full flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-lg hover:shadow-neutral-900/[0.04]"
                 >
-                  <service.icon className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-neutral-900" />
-                  <h3 className="mt-3 text-sm font-semibold text-neutral-900">
-                    {service.title}
-                  </h3>
-                  <p className="mt-1.5 flex-1 text-xs leading-relaxed text-neutral-500">
-                    {service.outcome}
-                  </p>
-                  <span className="mt-3 text-xs font-medium text-neutral-400 transition-colors group-hover:text-neutral-900">
-                    Learn more &rarr;
-                  </span>
+                  <div className="relative h-28 w-full overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                    />
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-5">
+                    <service.icon className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-neutral-900" />
+                    <h3 className="mt-3 text-sm font-semibold text-neutral-900">
+                      {service.title}
+                    </h3>
+                    <p className="mt-1.5 flex-1 text-xs leading-relaxed text-neutral-500">
+                      {service.outcome}
+                    </p>
+                    <span className="mt-3 text-xs font-medium text-neutral-400 transition-colors group-hover:text-neutral-900">
+                      Learn more &rarr;
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}
@@ -872,12 +873,14 @@ export default function Home() {
                 Book Your Free Consultation
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link
-                href="/pricing-calculator"
+              <a
+                href="https://wa.me/256780650952"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F1F23] px-8 py-4 text-sm font-medium text-white transition-all hover:border-neutral-500 hover:bg-[#17171A]"
               >
-                Calculate Pricing
-              </Link>
+                Get a Quote
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}

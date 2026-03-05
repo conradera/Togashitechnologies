@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
-type Category = "all" | "saas" | "enterprise" | "mobile" | "web";
+type Category = "all" | "ai-ml" | "enterprise" | "mobile" | "web";
 
 interface Project {
   title: string;
@@ -20,10 +20,10 @@ interface Project {
 const projects: Project[] = [
   {
     title: "FinTrack Enterprise",
-    category: "saas",
-    categoryLabel: "SaaS Platform",
+    category: "ai-ml",
+    categoryLabel: "AI/ML Platform",
     description:
-      "Multi-tenant financial management SaaS platform serving 200+ SMEs with automated invoicing, expense tracking, and real-time financial analytics.",
+      "AI-powered financial management platform serving 200+ SMEs with automated invoicing, expense tracking, and real-time financial analytics.",
     results: [
       "200+ active business accounts",
       "60% reduction in manual bookkeeping",
@@ -59,10 +59,10 @@ const projects: Project[] = [
   },
   {
     title: "EduPort LMS",
-    category: "saas",
-    categoryLabel: "SaaS Platform",
+    category: "ai-ml",
+    categoryLabel: "AI/ML Platform",
     description:
-      "Learning management system built for African educational institutions with offline-first capabilities, student portals, and automated grading.",
+      "AI-enhanced learning management system built for African educational institutions with offline-first capabilities, student portals, and automated grading.",
     results: [
       "8 institutions onboarded",
       "5,000+ students active",
@@ -126,7 +126,7 @@ const projects: Project[] = [
 
 const filters: { id: Category; label: string }[] = [
   { id: "all", label: "All Projects" },
-  { id: "saas", label: "SaaS" },
+  { id: "ai-ml", label: "AI/ML" },
   { id: "enterprise", label: "Enterprise" },
   { id: "mobile", label: "Mobile" },
   { id: "web", label: "Web" },
@@ -273,13 +273,15 @@ export default function PortfolioPage() {
             description="Let's discuss how Togashi Technologies can solve your unique challenges."
           />
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              href="/pricing-calculator"
+            <a
+              href="https://wa.me/256780650952"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#0E0E10] px-8 py-4 text-sm font-medium text-white transition-all hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)]"
             >
               Get a Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white px-8 py-4 text-sm font-medium text-neutral-700 transition-all hover:border-neutral-300"

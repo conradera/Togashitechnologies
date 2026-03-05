@@ -148,14 +148,16 @@ export default function ContactPage() {
                       Quick Estimate
                     </p>
                     <p className="mt-2 text-sm text-neutral-600">
-                      Need pricing fast? Use our{" "}
+                      Need pricing fast? Send us a message on{" "}
                       <a
-                        href="/pricing-calculator"
+                        href="https://wa.me/256780650952"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="font-medium text-[#059669] underline underline-offset-2"
                       >
-                        pricing calculator
+                        WhatsApp
                       </a>{" "}
-                      for instant estimates.
+                      for a quick quote.
                     </p>
                   </motion.div>
                 </div>
@@ -262,7 +264,7 @@ export default function ContactPage() {
                           >
                             <option value="">Select a service</option>
                             <option value="project-management">Project Management Services</option>
-                            <option value="saas">SaaS Development</option>
+                            <option value="ai-ml">AI/ML Development & Training</option>
                             <option value="custom">Custom Software</option>
                             <option value="mobile">Mobile Apps</option>
                             <option value="bpo">BPO Services</option>

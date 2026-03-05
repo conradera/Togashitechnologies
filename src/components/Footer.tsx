@@ -7,7 +7,7 @@ import { ArrowUpRight, Linkedin, Mail, MapPin, Phone, Shield } from "lucide-reac
 
 const services = [
   { label: "Custom Software", href: "/services#custom" },
-  { label: "SaaS Development", href: "/services#saas" },
+  { label: "AI/ML Development", href: "/services#ai-ml" },
   { label: "Mobile Apps", href: "/services#mobile" },
   { label: "IT Consultancy", href: "/services#consultancy" },
   { label: "Managed IT", href: "/services#managed" },
@@ -20,10 +20,10 @@ const services = [
 
 const company = [
   { label: "About", href: "/about" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Partners", href: "/partners" },
   { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
-  { label: "Pricing", href: "/pricing-calculator" },
+  { label: "Get a Quote", href: "https://wa.me/256780650952" },
 ];
 
 const industries = [
@@ -122,7 +122,7 @@ export default function Footer() {
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
               Forward-thinking technology company delivering globally competitive
-              SaaS platforms and digital transformation solutions.
+              AI-powered solutions and digital transformation services.
             </p>
 
             {/* Contact Details */}
@@ -197,12 +197,23 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               {company.map((item) => (
                 <motion.li key={item.label} variants={itemVariants}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-neutral-400 transition-colors hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.href.startsWith("http") ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-neutral-400 transition-colors hover:text-white"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-sm text-neutral-400 transition-colors hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </motion.li>
               ))}
             </ul>

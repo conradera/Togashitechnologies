@@ -10,8 +10,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
+  { href: "/partners", label: "Partners" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -77,13 +77,15 @@ export default function Navbar() {
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-4">
-              <Link
-                href="/pricing-calculator"
+              <a
+                href="https://wa.me/256780650952"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden items-center gap-2 rounded-full bg-[#0E0E10] px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#17171A] hover:shadow-lg hover:shadow-[rgba(5,150,105,0.15)] md:flex"
               >
                 Get a Quote
                 <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              </a>
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -139,14 +141,16 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
                 className="mt-8"
               >
-                <Link
-                  href="/pricing-calculator"
+                <a
+                  href="https://wa.me/256780650952"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={closeMenu}
                   className="flex w-full items-center justify-center gap-2 rounded-full bg-[#0E0E10] py-4 text-base font-medium text-white"
                 >
                   Get a Quote
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </motion.div>
             </div>
           </motion.div>
