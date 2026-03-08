@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 const contactItems = [
-  { icon: Mail, label: "Email", value: "hello@togashi.tech" },
+  { icon: Mail, label: "Email", value: "togashitechnologies@gmail.com" },
   { icon: Phone, label: "Phone", value: "Available on request" },
   { icon: MapPin, label: "Location", value: "Global delivery, local presence" },
   { icon: Clock, label: "Response Time", value: "Within 24 hours" },

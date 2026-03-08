@@ -33,7 +33,7 @@ const sections = [
   {
     title: "Your Rights",
     content:
-      "You have the right to access, correct, or delete your personal data. You may also withdraw consent for data processing at any time. To exercise these rights, contact us at hello@togashi.tech.",
+      "You have the right to access, correct, or delete your personal data. You may also withdraw consent for data processing at any time. To exercise these rights, contact us at togashitechnologies@gmail.com.",
   },
   {
     title: "Data Retention",
@@ -123,10 +123,10 @@ export default function PrivacyPage() {
               If you have questions about this Privacy Policy or wish to exercise
               your data rights, please contact us at{" "}
               <a
-                href="mailto:hello@togashi.tech"
+                href="mailto:togashitechnologies@gmail.com"
                 className="font-medium text-[#059669] underline underline-offset-4 transition-colors hover:text-[#047857]"
               >
-                hello@togashi.tech
+                togashitechnologies@gmail.com
               </a>
               .
             </p>

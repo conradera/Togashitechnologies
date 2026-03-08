@@ -117,7 +117,7 @@ export default function Footer() {
                 alt="Togashi Technologies"
                 width={120}
                 height={48}
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto rounded-lg object-contain"
               />
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
@@ -129,7 +129,7 @@ export default function Footer() {
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-2 text-sm text-neutral-400">
                 <Mail className="h-3.5 w-3.5 text-[#059669]" />
-                hello@togashi.tech
+                togashitechnologies@gmail.com
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-400">
                 <Phone className="h-3.5 w-3.5 text-[#059669]" />

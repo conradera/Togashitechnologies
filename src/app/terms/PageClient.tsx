@@ -127,10 +127,10 @@ export default function TermsPage() {
               If you have questions about these Terms of Service, please contact
               us at{" "}
               <a
-                href="mailto:hello@togashi.tech"
+                href="mailto:togashitechnologies@gmail.com"
                 className="font-medium text-[#059669] underline underline-offset-4 transition-colors hover:text-[#047857]"
               >
-                hello@togashi.tech
+                togashitechnologies@gmail.com
               </a>
               .
             </p>

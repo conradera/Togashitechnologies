@@ -18,7 +18,6 @@ import {
   BarChart3,
   Code2,
 } from "lucide-react";
-import AnimatedCounter from "@/components/AnimatedCounter";
 
 /* ─── VALUES (Operational Principles) ─── */
 
@@ -141,62 +140,6 @@ export default function AboutPage() {
                   outlast the engagement that created it.
                 </p>
               </div>
-            </motion.div>
-
-            {/* Metrics — Enhanced */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="grid grid-cols-2 gap-4"
-            >
-              {[
-                {
-                  value: 50,
-                  suffix: "+",
-                  label: "Projects Delivered",
-                  sublabel: "Across 4+ countries",
-                },
-                {
-                  value: 7,
-                  suffix: "+",
-                  label: "Industries Served",
-                  sublabel: "Gov, fintech, health, edu",
-                },
-                {
-                  value: 99,
-                  suffix: "%",
-                  label: "Client Satisfaction",
-                  sublabel: "Based on post-project surveys",
-                },
-                {
-                  value: 6,
-                  suffix: " Weeks",
-                  label: "Avg. Delivery Time",
-                  sublabel: "From kickoff to deployment",
-                },
-              ].map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.3 + i * 0.08 }}
-                  className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm"
-                >
-                  <span className="text-3xl font-bold text-[#059669]">
-                    <AnimatedCounter
-                      end={stat.value}
-                      suffix={stat.suffix}
-                    />
-                  </span>
-                  <p className="mt-1 text-sm font-medium text-neutral-700">
-                    {stat.label}
-                  </p>
-                  <p className="mt-0.5 text-xs text-neutral-400">
-                    {stat.sublabel}
-                  </p>
-                </motion.div>
-              ))}
             </motion.div>
           </div>
         </div>
