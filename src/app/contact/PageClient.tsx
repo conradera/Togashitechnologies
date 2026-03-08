@@ -15,7 +15,7 @@ import {
 
 const contactItems = [
   { icon: Mail, label: "Email", value: "togashitechnologies@gmail.com" },
-  { icon: Phone, label: "Phone", value: "Available on request" },
+  { icon: Phone, label: "Phone", value: "+256 780650952" },
   { icon: MapPin, label: "Location", value: "Global delivery, local presence" },
   { icon: Clock, label: "Response Time", value: "Within 24 hours" },
 ];

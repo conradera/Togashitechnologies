@@ -133,7 +133,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-400">
                 <Phone className="h-3.5 w-3.5 text-[#059669]" />
-                Available on request
+                +256 780650952
               </div>
               <div className="flex items-start gap-2 text-sm text-neutral-400">
                 <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#059669]" />
