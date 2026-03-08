@@ -42,7 +42,7 @@ const coreServices = [
   {
     icon: Globe,
     title: "Website Development",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    image: "/website-dev.jpeg",
     outcome:
       "Establish a powerful online presence with fast, responsive, and SEO-optimized websites that convert visitors into customers.",
     features: ["Corporate Sites", "E-commerce", "SEO Optimized"],
@@ -51,7 +51,7 @@ const coreServices = [
   {
     icon: Layers,
     title: "Systems Development",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    image: "/systems-dev.jpeg",
     outcome:
       "Streamline complex operations with integrated systems that connect departments, automate processes, and provide real-time visibility.",
     features: ["Business Systems", "Workflow Automation", "Real-time Analytics"],
@@ -69,7 +69,7 @@ const coreServices = [
   {
     icon: Cpu,
     title: "AI/ML Development Services & Training",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    image: "/ai-dev.jpeg",
     outcome:
       "Harness artificial intelligence and machine learning to automate processes, uncover insights, and build intelligent products that give you a competitive edge.",
     features: ["Custom AI Models", "ML Pipelines", "AI Training & Workshops"],
@@ -96,7 +96,7 @@ const coreServices = [
   {
     icon: Smartphone,
     title: "Mobile Applications",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+    image: "/mobile-dev.jpeg",
     outcome:
       "Put your business in every pocket with high-performance apps that drive engagement and revenue on iOS and Android.",
     features: ["Cross-Platform", "Native Performance", "Scalable Backend"],
