@@ -43,6 +43,7 @@ const coreServices = [
     icon: Globe,
     title: "Website Development",
     image: "/website-dev.jpeg",
+    alt: "Team designing a responsive website on multiple screens for corporate and e-commerce clients",
     outcome:
       "Establish a powerful online presence with fast, responsive, and SEO-optimized websites that convert visitors into customers.",
     features: ["Corporate Sites", "E-commerce", "SEO Optimized"],
@@ -52,6 +53,7 @@ const coreServices = [
     icon: Layers,
     title: "Systems Development",
     image: "/systems-dev.jpeg",
+    alt: "Enterprise systems dashboard showing integrated workflow automation and real-time analytics",
     outcome:
       "Streamline complex operations with integrated systems that connect departments, automate processes, and provide real-time visibility.",
     features: ["Business Systems", "Workflow Automation", "Real-time Analytics"],
@@ -61,6 +63,7 @@ const coreServices = [
     icon: Code2,
     title: "Custom Software Development",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    alt: "Developer writing custom software code for ERP systems and API integration",
     outcome:
       "Eliminate operational bottlenecks with tailored systems that automate workflows and reduce manual overhead by up to 60%.",
     features: ["ERP Systems", "API Integration", "Web Portals"],
@@ -70,6 +73,7 @@ const coreServices = [
     icon: Cpu,
     title: "AI/ML Development Services & Training",
     image: "/ai-dev.jpeg",
+    alt: "AI and machine learning model training pipeline visualization with data analytics",
     outcome:
       "Harness artificial intelligence and machine learning to automate processes, uncover insights, and build intelligent products that give you a competitive edge.",
     features: ["Custom AI Models", "ML Pipelines", "AI Training & Workshops"],
@@ -79,6 +83,7 @@ const coreServices = [
     icon: Cpu,
     title: "IT Consultancy & Digital Transformation",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    alt: "IT consultants strategizing digital transformation and cloud migration for enterprise clients",
     outcome:
       "Modernize legacy systems and align your technology stack with business goals — reducing IT costs while accelerating growth.",
     features: ["Cloud Migration", "Cybersecurity", "Process Automation"],
@@ -88,6 +93,7 @@ const coreServices = [
     icon: Wrench,
     title: "Managed IT Services",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
+    alt: "Server room with 24/7 monitoring infrastructure for managed IT services",
     outcome:
       "Achieve 99.9% uptime with proactive monitoring, SLA-backed support, and AI-powered infrastructure management.",
     features: ["24/7 Monitoring", "AI/ML Solutions", "IT Maintenance"],
@@ -97,6 +103,7 @@ const coreServices = [
     icon: Smartphone,
     title: "Mobile Applications",
     image: "/mobile-dev.jpeg",
+    alt: "Cross-platform mobile application running on iOS and Android smartphones",
     outcome:
       "Put your business in every pocket with high-performance apps that drive engagement and revenue on iOS and Android.",
     features: ["Cross-Platform", "Native Performance", "Scalable Backend"],
@@ -109,6 +116,7 @@ const supportingServices = [
     icon: Headphones,
     title: "BPO Services",
     image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80",
+    alt: "Professional team providing IT-enabled business process outsourcing services",
     outcome: "Scale operations without scaling headcount through IT-enabled outsourcing.",
     href: "/services#bpo",
   },
@@ -116,6 +124,7 @@ const supportingServices = [
     icon: GraduationCap,
     title: "IT Training & Capacity Building",
     image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80",
+    alt: "IT training workshop with participants learning digital skills and technology certification",
     outcome: "Upskill your workforce with certified programs that close the digital skills gap.",
     href: "/services#training",
   },
@@ -123,6 +132,7 @@ const supportingServices = [
     icon: Compass,
     title: "Strategic Advisory & CTO-as-a-Service",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+    alt: "Strategic technology advisor reviewing business roadmap and CTO-level planning documents",
     outcome: "Access C-level technology leadership and strategic roadmapping on demand.",
     href: "/services#advisory",
   },
@@ -130,6 +140,7 @@ const supportingServices = [
     icon: ClipboardList,
     title: "Project Management",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&q=80",
+    alt: "Project management dashboard showing timeline, milestones, and KPI tracking",
     outcome: "Deliver complex projects on time, within budget, and aligned to business KPIs.",
     href: "/services#project-management",
   },
@@ -137,6 +148,7 @@ const supportingServices = [
     icon: Palette,
     title: "Graphics & Brand Design",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+    alt: "Graphic designer creating brand identity with logo design and visual assets",
     outcome: "Build a visual identity that communicates authority and wins trust at first glance.",
     href: "/services#graphics",
   },
@@ -510,7 +522,7 @@ export default function Home() {
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={service.alt || service.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -578,7 +590,7 @@ export default function Home() {
                   <div className="relative h-28 w-full overflow-hidden">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={service.alt || service.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
